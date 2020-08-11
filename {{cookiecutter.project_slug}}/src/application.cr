@@ -8,10 +8,10 @@ class Application < Grip::Application
 
   # The routing and error handling logic is defined here.
   def initialize
-    get "/", Controllers::Index
-    post "/", Controllers::Index
-    put "/", Controllers::Index
-    delete "/", Controllers::Index
+    # Ignore everything other than JSON content.
+    pipeline :api, [
+      {{cookiecutter.module_slug}}Web::Pipes::AcceptJson.new()
+    ]
   end
 end
 
