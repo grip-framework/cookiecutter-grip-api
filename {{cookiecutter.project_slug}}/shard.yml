@@ -1,0 +1,17 @@
+name: {{cookiecutter.project_slug}}
+version: 0.1.0
+
+authors:
+  - {{cookiecutter.full_name}} {{cookiecutter.email}}
+
+targets:
+  cookiecutter:
+    main: src/application.cr
+
+dependencies:
+  grip:
+    github: grip-framework/grip
+
+crystal: 0.35.1
+
+license: MIT
