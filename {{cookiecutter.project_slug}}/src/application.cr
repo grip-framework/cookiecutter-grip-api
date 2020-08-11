@@ -3,8 +3,16 @@ require "./{{cookiecutter.project_slug}}/**"
 require "./{{cookiecutter.project_slug}}_web/**"
 
 class Application < Grip::Application
+  # The alias is a shortcut to the longer cumbersome name.
+  alias Controllers = {{cookiecutter.module_slug}}Web::Controllers
+
   # The routing and error handling logic is defined here.
-  def initialize; end
+  def initialize
+    get "/", Controllers::Index
+    post "/", Controllers::Index
+    put "/", Controllers::Index
+    delete "/", Controllers::Index
+  end
 end
 
 # Initialize the `Application` to host the API.
