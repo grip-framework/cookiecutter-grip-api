@@ -1,11 +1,11 @@
 name: {{cookiecutter.project_slug}}
-version: 0.1.0
+version: {{cookiecutter.version}}
 
 authors:
   - {{cookiecutter.full_name}} {{cookiecutter.email}}
 
 targets:
-  cookiecutter:
+  {{cookiecutter.project_slug}}:
     main: src/application.cr
 
 dependencies:
