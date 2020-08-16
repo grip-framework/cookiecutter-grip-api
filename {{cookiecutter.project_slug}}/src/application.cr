@@ -1,4 +1,6 @@
 require "grip"
+
+require "./config/**"
 require "./{{cookiecutter.project_slug}}/**"
 require "./{{cookiecutter.project_slug}}_web/**"
 
