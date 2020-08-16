@@ -1,27 +1,17 @@
-# {{cookiecutter.project_slug}}
-
-TODO: Write a description here
+# {{cookiecutter.module_slug}}
 
 ## Installation
 
-TODO: Write installation instructions here
+```bash
+git clone ...
+cd {{cookiecutter.project_slug}}
+shards install
+make sam db:create
+make sam db:migrate
+```
 
-## Usage
+## Running
 
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
-
-## Contributing
-
-1. Fork it (<https://github.com/your-github-user/{{cookiecutter.project_slug}}/fork>)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
-
-## Contributors
-
-- [your-name-here](https://github.com/your-github-user) - creator and maintainer
+```bash
+make run
+```
