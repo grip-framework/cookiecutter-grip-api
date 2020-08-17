@@ -27,7 +27,7 @@ class Application < Grip::Application
     # Insert a big chunk of macro code to register the error code
     # handlers, which return a proper response to the request, if an endpoint fails.
     error 400, Exceptions::BadRequestController
-    error 401, Exceptions::UnAuthorizedController
+    error 401, Exceptions::UnauthorizedController
     error 403, Exceptions::ForbiddenController
     error 404, Exceptions::NotFoundController
     error 405, Exceptions::MethodNotAllowedController
