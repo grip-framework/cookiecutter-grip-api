@@ -5,9 +5,6 @@ require "./{{cookiecutter.project_slug}}/**"
 require "./{{cookiecutter.project_slug}}_web/**"
 
 class Application < Grip::Application
-  # Export chunks of the code into macros.
-  include {{cookiecutter.module_slug}}Web::Helpers::Macros
-
   # The alias is a shortcut to the longer cumbersome name.
   alias Controllers = {{cookiecutter.module_slug}}Web::Controllers
   alias Views = {{cookiecutter.module_slug}}Web::Views
@@ -24,8 +21,8 @@ class Application < Grip::Application
       Grip::Pipes::PoweredByHeader.new()
     ]
 
-    # Insert a big chunk of macro code to register the error code
-    # handlers, which return a proper response to the request, if an endpoint fails.
+    # Create handles for the error codes that might
+    # occur while processing the request
     error 400, Exceptions::BadRequestController
     error 401, Exceptions::UnauthorizedController
     error 403, Exceptions::ForbiddenController
