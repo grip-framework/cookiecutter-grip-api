@@ -12,10 +12,8 @@ class Application < Grip::Application
 
   # The routing and error handling logic is defined here.
   def initialize
-
-    # Ignore everything other than JSON content.
     pipeline :api, [
-      Grip::Pipes::SecureHeaders.new
+      Grip::Pipes::SecureHeaders.new,
       Grip::Pipes::PoweredByHeader.new
     ]
 
