@@ -3,6 +3,7 @@ module {{cookiecutter.module_slug}}Web
     module Exceptions
       class NotFoundController < Grip::Controllers::Exception
         alias NotFoundView = {{cookiecutter.module_slug}}Web::Views::Exceptions::NotFoundView
+        
         def call(context)
           case context.exception.not_nil!
           when Grip::Exceptions::NotFound

@@ -7,18 +7,16 @@ require "./{{cookiecutter.project_slug}}_web/**"
 class Application < Grip::Application
   # The alias is a shortcut to the longer cumbersome name.
   alias Controllers = {{cookiecutter.module_slug}}Web::Controllers
-  alias Views = {{cookiecutter.module_slug}}Web::Views
-  alias Pipes = {{cookiecutter.module_slug}}Web::Pipes
-  alias Exceptions = Controllers::Exceptions
+  alias Views       = {{cookiecutter.module_slug}}Web::Views
+  alias Exceptions  = Controllers::Exceptions
 
   # The routing and error handling logic is defined here.
   def initialize
 
     # Ignore everything other than JSON content.
     pipeline :api, [
-      Pipes::AcceptJson.new(),
-      Grip::Pipes::Log.new(),
-      Grip::Pipes::PoweredByHeader.new()
+      Grip::Pipes::SecureHeaders.new
+      Grip::Pipes::PoweredByHeader.new
     ]
 
     # Create handles for the error codes that might

@@ -11,6 +11,7 @@ targets:
 dependencies:
   grip:
     github: grip-framework/grip
+    branch: feature/function-chaining
 
   jennifer:
     github: imdrasil/jennifer.cr

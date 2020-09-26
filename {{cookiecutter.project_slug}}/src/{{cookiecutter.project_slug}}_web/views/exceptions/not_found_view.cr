@@ -3,14 +3,14 @@ module {{cookiecutter.module_slug}}Web
     module Exceptions
       class NotFoundView
         def self.render_default(context)
-          context.response.headers.merge!({"Content-Type" => "application/json"})
-          context.response.print(
-            {
-              "errors" => [
-                context.exception.to_s
-              ]
-            }.to_json
-          )
+          context
+            .json(
+              {
+                "errors" => [
+                  context.exception.to_s
+                ]
+              }
+            )
         end
       end
     end

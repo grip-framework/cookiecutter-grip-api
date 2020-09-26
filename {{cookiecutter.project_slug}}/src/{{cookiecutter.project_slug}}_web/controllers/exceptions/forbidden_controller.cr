@@ -3,6 +3,7 @@ module {{cookiecutter.module_slug}}Web
     module Exceptions
       class ForbiddenController < Grip::Controllers::Exception
         alias ForbiddenView = {{cookiecutter.module_slug}}Web::Views::Exceptions::ForbiddenView
+        
         def call(context)
           case context.exception.not_nil!
           when Grip::Exceptions::Forbidden
