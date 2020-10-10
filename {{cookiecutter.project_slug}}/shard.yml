@@ -2,7 +2,7 @@ name: {{cookiecutter.project_slug}}
 version: {{cookiecutter.version}}
 
 authors:
-  - {{cookiecutter.full_name}} {{cookiecutter.email}}
+  - {{cookiecutter.full_name}} <{{cookiecutter.email}}>
 
 targets:
   {{cookiecutter.project_slug}}:
@@ -11,18 +11,6 @@ targets:
 dependencies:
   grip:
     github: grip-framework/grip
-    branch: feature/function-chaining
-
-  jennifer:
-    github: imdrasil/jennifer.cr
-    commit: 4a9d552a96d08c3116f0e2d91d5a16e7a3fb9e76
-
-  pg:
-    github: will/crystal-pg
-    commit: cafe111fc28e366c219144d5f656c3718d7357dd
-
-  sam:
-    github: imdrasil/sam.cr
 
 crystal: 0.35.1
 

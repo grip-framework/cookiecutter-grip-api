@@ -6,8 +6,6 @@
 git clone ...
 cd {{cookiecutter.project_slug}}
 shards install
-make sam db:create
-make sam db:migrate
 ```
 
 ## Running

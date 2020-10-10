@@ -1,6 +1,5 @@
 require "grip"
 
-require "./config/**"
 require "./{{cookiecutter.project_slug}}/**"
 require "./{{cookiecutter.project_slug}}_web/**"
 
@@ -12,13 +11,12 @@ class Application < Grip::Application
 
   # The routing and error handling logic is defined here.
   def initialize
-    pipeline :api, [
-      Grip::Pipes::SecureHeaders.new,
+    pipeline :web, [
       Grip::Pipes::PoweredByHeader.new
     ]
 
     # Create handles for the error codes that might
-    # occur while processing the request
+    # occur while processing the request.
     error 400, Exceptions::BadRequestController
     error 401, Exceptions::UnauthorizedController
     error 403, Exceptions::ForbiddenController
