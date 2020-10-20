@@ -16,7 +16,7 @@ class Application < Grip::Application
   # The routing and error handling logic is defined here.
   def routes
     pipeline :web, [
-      Grip::Pipes::PoweredByHeader.new
+      Pipes::PoweredByHeader.new
     ]
 
     # Create handles for the error codes that might
