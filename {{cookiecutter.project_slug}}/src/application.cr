@@ -9,8 +9,12 @@ class Application < Grip::Application
   alias Views       = {{cookiecutter.module_slug}}Web::Views
   alias Exceptions  = Controllers::Exceptions
 
+  def reuse_port
+    true
+  end
+
   # The routing and error handling logic is defined here.
-  def initialize
+  def routes
     pipeline :web, [
       Grip::Pipes::PoweredByHeader.new
     ]
@@ -32,10 +36,7 @@ app = Application.new()
 # For each CPU on the system run the `Application`, reuse the TCP port.
 System.cpu_count.times do |_|
   Process.fork do
-    app.run do |config|
-      server = config.server.not_nil!
-      server.bind_tcp "0.0.0.0", 4000, reuse_port: true
-    end
+    app.run
   end
 end
 

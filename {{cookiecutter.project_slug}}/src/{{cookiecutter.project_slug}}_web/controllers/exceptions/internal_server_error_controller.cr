@@ -6,7 +6,7 @@ module {{cookiecutter.module_slug}}Web
         
         def call(context)
           case context.exception.not_nil!
-          when Grip::Exceptions::InternalServerError
+          when ::Exceptions::InternalServerError
             InternalServerErrorView.render_default(context)
           end
         end
