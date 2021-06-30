@@ -3,10 +3,10 @@ module {{cookiecutter.module_slug}}Web
     module Exceptions
       class InternalServerErrorController < Grip::Controllers::Exception
         alias InternalServerErrorView = {{cookiecutter.module_slug}}Web::Views::Exceptions::InternalServerErrorView
-        
+
         def call(context)
           case context.exception.not_nil!
-          when ::Exceptions::InternalServerError
+          when Grip::Exceptions::InternalServerError
             InternalServerErrorView.render_default(context)
           end
         end
