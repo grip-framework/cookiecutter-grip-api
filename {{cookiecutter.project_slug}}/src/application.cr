@@ -15,10 +15,6 @@ class Application < Grip::Application
 
   # The routing and error handling logic is defined here.
   def routes
-    pipeline :web, [
-      Pipes::PoweredByHeader.new
-    ]
-
     # Create handles for the error codes that might
     # occur while processing the request.
     error 400, Exceptions::BadRequestController
