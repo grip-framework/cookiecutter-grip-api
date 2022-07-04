@@ -1,15 +1,39 @@
-# {{cookiecutter.module_slug}}
+# {{cookiecutter.project_name}}
+
+TODO: Write a description here
 
 ## Installation
 
-```bash
-git clone ...
-cd {{cookiecutter.project_slug}}
-shards install
+1. Add the dependency to your `shard.yml`:
+
+   ```yaml
+   dependencies:
+     {{cookiecutter.project_slug}}:
+       github: your-github-user/{{cookiecutter.project_slug}}
+   ```
+
+2. Run `shards install`
+
+## Usage
+
+```crystal
+require "{{cookiecutter.project_slug}}"
 ```
 
-## Running
+TODO: Write usage instructions here
 
-```bash
-make run
-```
+## Development
+
+TODO: Write development instructions here
+
+## Contributing
+
+1. Fork it (<https://github.com/your-github-user/{{cookiecutter.project_slug}}/fork>)
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
+
+## Contributors
+
+- [{{cookiecutter.full_name}}](https://github.com/your-github-user) - creator and maintainer

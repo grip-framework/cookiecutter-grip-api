@@ -6,11 +6,14 @@ authors:
 
 targets:
   {{cookiecutter.project_slug}}:
-    main: src/application.cr
+    main: src/process_manager.cr
 
 dependencies:
   grip:
     github: grip-framework/grip
+
+  spectator:
+    github: grip-framework/spectator
 
 crystal: ">= 0.36.0"
 
