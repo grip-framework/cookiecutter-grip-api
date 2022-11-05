@@ -11,9 +11,11 @@ targets:
 dependencies:
   grip:
     github: grip-framework/grip
+    version: ~> 2.0.0
 
   spectator:
     github: grip-framework/spectator
+    version: ~> 0.2.0
 
 development_dependencies:
   ameba:
