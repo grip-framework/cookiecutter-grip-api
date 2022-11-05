@@ -4,21 +4,9 @@ TODO: Write a description here
 
 ## Installation
 
-1. Add the dependency to your `shard.yml`:
-
-   ```yaml
-   dependencies:
-     {{cookiecutter.project_slug}}:
-       github: your-github-user/{{cookiecutter.project_slug}}
-   ```
-
-2. Run `shards install`
+TODO: Write installation instructions here
 
 ## Usage
-
-```crystal
-require "{{cookiecutter.project_slug}}"
-```
 
 TODO: Write usage instructions here
 

@@ -12,7 +12,8 @@ class Application < Grip::Application
   end
 
   # The routing and error handling logic is defined here.
-  def routes
+  def initialize
+    super(environment: ENV["ENVIRONMENT"] || "development", serve_static: false)
     scope "/api" do
       scope "/cookie" do
         get "/",  Controllers::CookieController
