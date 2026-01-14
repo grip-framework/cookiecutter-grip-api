@@ -1,4 +1,4 @@
-CRYSTAL_BIN ?= `which crystal`
+SHARDS_BIN ?= `which shards`
 
 run:
-	$(CRYSTAL_BIN) run ./src/process_manager.cr
+	$(SHARDS_BIN) run --error-trace --progress

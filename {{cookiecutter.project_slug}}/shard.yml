@@ -6,7 +6,7 @@ authors:
 
 targets:
   {{cookiecutter.project_slug}}:
-    main: src/process_manager.cr
+    main: src/{{cookiecutter.project_slug}}.cr
 
 dependencies:
   grip:

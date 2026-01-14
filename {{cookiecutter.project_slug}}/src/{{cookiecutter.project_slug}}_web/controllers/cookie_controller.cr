@@ -1,6 +1,8 @@
 module {{cookiecutter.module_slug}}Web
   module Controllers
-    class CookieController < Grip::Controllers::Http
+    class CookieController
+      include Grip::Controllers::Http
+
       def get(context : Context)
         context
           .put_status(418)
