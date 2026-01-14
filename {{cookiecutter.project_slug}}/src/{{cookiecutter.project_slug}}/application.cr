@@ -1,4 +1,4 @@
-require "./{{cookiecutter.project_slug}}_web/**"
+require "../{{cookiecutter.project_slug}}_web/**"
 
 module {{cookiecutter.module_slug}}
   class Application
